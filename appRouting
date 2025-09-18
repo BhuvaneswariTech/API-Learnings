@@ -1,0 +1,48 @@
+# we can do concatenate in the url itself 
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route('/name/<user>')
+def home(user):
+    return 'API created '+ user
+
+if __name__ == '__main__':
+    app.run(debug=True) 
+
+''' sample input
+we can pass the local address with /name/(any string)
+then it will be displayed with the string added in url ''' 
+
+# we can add the numbers as well in url
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route('/name/<float:sub>')
+def home(sub):
+    return 'API created= %f'  %sub
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+# sample : http://127.0.0.1:5000/name/600(any number, number changes depends on the type of number, whther it is float or int)
+
+
+# use of add_url_rule() function 
+from flask import Flask
+
+app = Flask(__name__)
+
+
+def bhuvana():
+    return 'API created'
+app.add_url_rule('/bhuvana','bhuvana',bhuvana)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+# sample input to run in web: http://127.0.0.1:5000/bhuvana
