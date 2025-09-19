@@ -1,5 +1,7 @@
-API Projects & Learnings
-Welcome to my *API Projects Repository*!  
+****API Projects & Learnings
+Welcome to my *API Projects Repository*!  ****
+
+**project 1: apicreate**
 This repo contains my  *API learning notes*, *sample code*, and *mini projects* built using different frameworks.
 
  Contents
@@ -50,3 +52,79 @@ ________________________________________
 9.	http://127.0.0.1:5000/
 ________________________________________
 
+
+
+**flaskTemplate( Templates using flask )**
+Flask Basic Web App
+This is a beginner-friendly Flask project that shows how Python, HTML, and CSS work together to create a simple web application.
+It will help you understand:
+•	How Flask serves HTML templates.
+•	How to connect CSS styles for better design.
+•	How to run a Flask app locally.
+
+
+ Project Structure
+project/
+│
+├── app.py                # Main Python file (Flask application)
+├── Templatescript/       # Folder for HTML files
+│   └── base.html
+├── Templatestyle/        # Folder for CSS files
+│   └── style.css
+└── README.md             # Documentation
+
+Requirements
+•	Python 3.x
+•	Flask (install with pip)
+Install Flask using:
+pip install flask
+
+How to Run
+1.	Download or clone this repository.
+2.	Open a terminal inside the project folder.
+3.	Run the app:
+4.	python app.py
+5.	Open your browser and go to:
+6.	http://127.0.0.1:5000/user
+7.	
+You should now see a styled web page about Flask 
+
+ Explanation
+ flaskTemplate.py
+•	Starts the Flask app.
+•	Points to:
+o	Templatescript/ for HTML files.
+o	Templatestyle/ for CSS files.
+•	Defines one route:
+•	/user
+which shows the HTML page.
+
+base.html
+•	The main web page.
+•	Contains headings (<h1>, <h2>) and paragraphs (<p>).
+•	Includes the CSS file with:
+•	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+style.css
+•	Adds design (fonts, colors, spacing, shadows).
+•	Makes the webpage look neat and professional.
+
+Output
+When you open /user in your browser, you will see:
+•	A title: Flask
+•	Sections like Introduction to Flask, Core Features, Flask vs Django, Use Cases, Advantages.
+•	Nicely styled using CSS.
+
+
+Notes
+•	By default, Flask expects folders named templates/ and static/.
+•	Here, we renamed them to Templatescript/ and Templatestyle/, so we configured Flask like this:
+•	app = Flask(__name__, template_folder="Templatescript", static_folder="Templatestyle")
+
+
+Why this project?
+This project is perfect for:
+•	Beginners learning Flask.
+•	Understanding how Python + HTML + CSS fit together.
+•	A simple example to show on your GitHub profile.
