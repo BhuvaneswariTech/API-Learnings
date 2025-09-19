@@ -1,0 +1,117 @@
+# python file (.py)
+from flask import Flask, render_template
+
+app = Flask(__name__, template_folder="Templatescript", static_folder="Templatestyle" )
+
+
+@app.route('/user')
+
+def message():
+    return render_template('base.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+# html file (.html)
+<html> 
+<head>
+    
+    <title> Flask </title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+<h1> FLASK </h1>
+<h2> 1. Introduction to Flask </h2>
+
+<p>Flask is a lightweight and flexible **Python web framework** that allows developers to build web applications quickly and efficiently. It is considered a **microframework** because it does not come with many built-in tools like authentication or database management. Instead, it provides the essentials for routing, request handling, and templating, while giving developers the freedom to choose their own additional libraries as needed. This makes Flask highly popular for small to medium-sized projects and for learning web development.</p>
+
+
+<h2> 2. Core Features of Flask </h2>
+
+<p>Flask comes with several important features out of the box. It includes a **development server** and **debugger** to test applications locally. The framework supports **URL routing** using decorators, which helps map URLs to specific functions. Flask also integrates with **Jinja2 templating**, allowing dynamic HTML rendering. Furthermore, it provides an easy way to work with **REST APIs**, making it suitable for modern applications. Despite being minimal, Flask is **extensible**, meaning you can add functionality like authentication, database handling, or form validation using third-party extensions.</p>
+
+
+<h2> 3. Flask vs Django </h2>
+
+<p>A common comparison in Python web development is between Flask and **Django**. While Django is a **full-stack framework** that comes with built-in ORM (Object Relational Mapper), admin panel, authentication, and many other tools, Flask gives you only the essentials and leaves the rest to your choice. Flask is often preferred when developers want more **control and flexibility**, or when they are building smaller or API-focused applications. On the other hand, Django is better for large, structured projects where convention and built-in features save development time.</p>
+
+
+<h2> 4. Use Cases of Flask </h2>
+
+<p>Flask is widely used in scenarios where simplicity, flexibility, and speed of development matter. For instance, it is popular for creating **RESTful APIs**, **prototyping web apps**, and **microservices**. Companies also use Flask in production for lightweight services, dashboards, and applications where performance and scalability are important. Because it is easy to learn and use, Flask is also widely adopted in the academic and startup environment to quickly bring ideas to life.
+
+
+<h2> 5. Advantages and Limitations </h2>
+
+<p>The advantages of Flask include its **simplicity**, **flexibility**, and **extensibility**. Developers can start small and scale up by adding only what they need. Its lightweight nature makes it easy to understand, which is why many beginners choose Flask as their first web framework. However, the limitation is that Flask does not provide everything by default. Developers may need to integrate many third-party libraries, which can sometimes lead to inconsistency or extra setup. Still, for those who value control and modularity, Flask remains an excellent choice.</p>
+
+
+</div>
+</body>
+</html>
+
+# css file (.css)
+/* General styling */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Container for content */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading styles */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+h2 {
+    color: #3498db;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Inline code */
+code {
+    background: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+    color: #d63384;
+}
+
+/* Links if needed */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
